@@ -48,6 +48,10 @@ while $i3 < $num3 do # another while loop for date of birth
     puts "please human, a year"
   elsif dob > 2017 # if the user puts a year higher than curret year then it will not allow you to continue. the loop will continue
     puts "you invented a time machine pls say no more. put a year that not in a future"
+  elsif birth == "true" && dob < 1918 # if the user puts a year higher than curret year then it will not allow you to continue. the loop will continue
+    puts "human for this trick to work you can not go below 1918"
+  elsif birth == "false" &&  dob < 1917 # if the user puts a year higher than curret year then it will not allow you to continue. the loop will continue
+    puts "human for this trick to work you can not go below 1917"
   elsif birth == "false" && dob == 2017 # if the user said no he didnt had a birthday this year and if he puts curret year as his date of birth then the loop will continue
     puts "you confuse me human, so you werent born in this year yet you put 2017 year as a DOB"
   elsif count < 4 # this is were we use that count. if the user puts a year with less than 3 digit year than the loop will continue
@@ -56,6 +60,7 @@ while $i3 < $num3 do # another while loop for date of birth
     $i3 = 2 # if everything checkout we want to close the loop
   end
 end
+
 
 result = add_b - dob # another math to calculate the age
 
