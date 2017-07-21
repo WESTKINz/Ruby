@@ -26,7 +26,7 @@ multiply_b = add_a * 50
 
 while $i2 < $num2  do # while loop for did you had a birthday this year? true or false
   puts "did you had a birthday this year? true or false"
-  birth = gets.chomp
+  birth = gets.chomp.downcase
   if birth == "true" # the use of == means its equal to so what im saying here is is birth value equal to true
     $i2 +=2 # if its true then we want to end the loop
     add_b = multiply_b + 1767 #simple math to calculate the age
@@ -34,7 +34,7 @@ while $i2 < $num2  do # while loop for did you had a birthday this year? true or
     $i2 +=2 # if its false then we want to end the loop
     add_b = multiply_b + 1766 #simple math to calculate the age
   else # if the user put something else then loop will continue
-    print "its a simple true or false man. and its case sensitive. has to be true or false\n"
+    print "its a simple true or false man. \n"
   end
 end
 
@@ -47,7 +47,7 @@ while $i3 < $num3 do # another while loop for date of birth
   if dob == 0 # if the user puts a letter then it will convert to 0 so we want a year. the loop will continue
     puts "please human, a year"
   elsif dob > 2017 # if the user puts a year higher than curret year then it will not allow you to continue. the loop will continue
-    puts "you invented a time machine pls say no more. put a year that not in a future"
+    puts "you invented a time machine pls say no more. put a year that is not in a future"
   elsif birth == "true" && dob < 1918 # the trick doesnt work if you are more than 99 years old
     puts "human for this trick to work you can not go below 1918"
   elsif birth == "false" &&  dob < 1917 # the trick doesnt work if you are more than 99 years old
@@ -66,4 +66,4 @@ result = add_b - dob # another math to calculate the age
 
 first, second, third = result.to_s.split('') # the result will always be three digit. first one will be the number you choose, the rest will be the your age so we want to split than value and assign it to the variable named first, second and third.
 puts "you choose #{first} number" # this is where the user will see the result. tada
-puts "you are #{second}#{third} old"
+puts "you are #{second}#{third} years old"
